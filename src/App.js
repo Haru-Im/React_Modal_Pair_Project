@@ -1,4 +1,5 @@
 
+import Input from "./components/Input";
 import { LargeButton, MediumButton, SmallButton } from "./components/buttons";
 import { ButtonContainer } from "./components/containers/buttoncotainer";
 
@@ -7,7 +8,7 @@ function App() {
 
     return (
       <>
-        <h2> Button</h2>
+        <h1> Button</h1>
         <ButtonContainer>
           <LargeButton
             onClick={() => {
@@ -32,7 +33,7 @@ function App() {
               }
             }}
           >
-            <p>Large Negative Button</p>aa
+            <p>Large Negative Button</p>
           </LargeButton>
 
           <MediumButton
@@ -48,6 +49,8 @@ function App() {
             Small
           </SmallButton>
         </ButtonContainer>
+        <h1>Input</h1>
+        <Input />
       </>
     );
   };
