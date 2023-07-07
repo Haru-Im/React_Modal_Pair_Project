@@ -1,7 +1,12 @@
-import "./App.css";
+import { ThemeProvider } from "styled-components";
+import { ButtonLayout, theme } from "./modals";
 
 function App() {
-  return <></>;
+  return (
+    <ThemeProvider theme={theme}>
+      <ButtonLayout />
+    </ThemeProvider>
+  );
 }
 
 export default App;

@@ -1,5 +1,5 @@
 import { ButtonComponent } from "../button-component";
-import { handleClick } from "../button-handler/button.handler";
+import { handleButtonClick } from "../button-handler/button.handler";
 import { Container } from "../button-style";
 import {
   ATTRIBUTE_NEGATIVE,
@@ -16,7 +16,7 @@ export const BtnContainer = ({ attribute }) => {
         <ButtonComponent
           attribute={attribute}
           size={SIZE_LARGE}
-          onClick={() => handleClick(ATTRIBUTE_PRIMARY)}
+          onClick={() => handleButtonClick(ATTRIBUTE_PRIMARY)}
         >
           Large Primary Button
         </ButtonComponent>
@@ -33,7 +33,11 @@ export const BtnContainer = ({ attribute }) => {
   if (attribute === ATTRIBUTE_NEGATIVE) {
     return (
       <Container>
-        <ButtonComponent attribute={attribute} size={SIZE_LARGE}>
+        <ButtonComponent
+          attribute={attribute}
+          size={SIZE_LARGE}
+          onClick={() => handleButtonClick(ATTRIBUTE_NEGATIVE)}
+        >
           Large Negative Button
         </ButtonComponent>
         <ButtonComponent attribute={attribute} size={SIZE_MEDIUM}>
