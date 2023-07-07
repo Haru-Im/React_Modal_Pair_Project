@@ -1,6 +1,7 @@
+import { Container } from "../../styles";
 import { ButtonComponent } from "../button-component";
 import { handleButtonClick } from "../button-handler/button.handler";
-import { Container } from "../button-style";
+
 import {
   ATTRIBUTE_NEGATIVE,
   ATTRIBUTE_PRIMARY,

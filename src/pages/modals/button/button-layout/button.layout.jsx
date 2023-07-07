@@ -1,5 +1,6 @@
+import { Layout, Title } from "../../styles";
 import { BtnContainer } from "../button-container";
-import { Layout, Title } from "../button-style";
+
 import { ATTRIBUTE_NEGATIVE, ATTRIBUTE_PRIMARY } from "../button-utils";
 
 export const ButtonLayout = ({}) => {
