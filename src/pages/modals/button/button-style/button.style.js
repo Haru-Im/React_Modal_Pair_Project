@@ -21,7 +21,7 @@ export const ThemedButton = styled.button`
     props.size === SIZE_LARGE
       ? "rgb(255, 255, 255)"
       : props.theme.attributes[props.attribute]?.backgroundColor ||
-        props.theme.attributes[ATTRIBUTE_PRIMARY].backgroundColor};
+        "rgb(255, 255, 255)"};
 
   &:active {
     background-color: ${(props) =>
