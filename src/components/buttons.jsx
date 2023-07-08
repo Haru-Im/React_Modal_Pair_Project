@@ -3,9 +3,8 @@ import { styled } from "styled-components";
 export const LargeButton = styled.button.attrs((props)=>({
 
   style:{
-    color: props.textColor? props.textColor : 'black)',
-    border: props.border? props.border : '3px solid green',
-    backgroundColor: props.backgroundcolor? props.backgroundcolor : 'White'
+    color: props.textcolor? props.textcolor : 'black',
+    border: props.border? props.border : '3px solid rgb(85, 239, 196)',
   }
 }))`
   display: flex;
@@ -14,6 +13,7 @@ export const LargeButton = styled.button.attrs((props)=>({
   gap: 7px;
   cursor: pointer;
   border-radius: 8px;
+  background-color: white;
 
   height: 50px;
   width: 200px;
@@ -28,8 +28,8 @@ export const LargeButton = styled.button.attrs((props)=>({
 
 export const MediumButton = styled.button.attrs((props) => ({
   style: {
-    backgroundColor: props.backgroundcolor || 'green',
-    color: props.textColor || 'black'
+    backgroundColor: props.backgroundcolor || 'rgb(85, 239, 196)',
+    color: props.textcolor || 'black'
   }
 }))`
   border: none;
@@ -46,8 +46,8 @@ export const MediumButton = styled.button.attrs((props) => ({
 
 export const SmallButton = styled.button.attrs((props) => ({
   style:{
-    backgroundColor: props.backgroundcolor || 'green',
-    color:props.textColor || 'rgb(0,0,0)'
+    backgroundColor: props.backgroundcolor || 'rgb(85, 239, 196)',
+    color:props.textcolor || 'rgb(0,0,0)'
   }
 
 }))`

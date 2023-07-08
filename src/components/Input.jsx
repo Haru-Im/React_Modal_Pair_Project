@@ -27,7 +27,7 @@ function Input() {
   
 
   const ButtonHandler = () => {
-    if (name === "" && number === ""){
+    if (name === "" && number === 0){
         alert('이름과 가격 모두 입력해주세요.')
     }else{
      alert(`name: ${name}, price: ${number}`);
@@ -60,6 +60,10 @@ const Inputbox = styled.input`
     border-radius: 8px;
     padding-left: 12px;
     padding-right: 12px;
+
+    &:focus{
+        border:2px solid black;
+    }
   `;
 
 const Inputcontainer = styled.div`
