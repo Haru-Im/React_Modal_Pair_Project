@@ -4,6 +4,7 @@ import { LargeButton, MediumButton, SmallButton } from "./components/buttons";
 import { Modalcontainer } from "./components/containers/modalcontainer";
 import { ButtonContainer } from "./components/containers/buttoncotainer";
 import Modals from "./components/modals";
+import Select from "./components/select";
 
 function App() {
   const [modal1, setModal1] = useState(false);
@@ -113,6 +114,7 @@ function App() {
           </Modals>
         </div>
       </ButtonContainer>
+      <Select/>
     </>
   );
 }

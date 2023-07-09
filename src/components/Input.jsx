@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 function Input() {
   const [name, setName] = useState("");
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState("0");
 
   const NameHandler = (e) => {
     setName(e.target.value);
@@ -27,7 +27,7 @@ function Input() {
   
 
   const ButtonHandler = () => {
-    if (name === "" && number === 0){
+    if (name === "" && number === '0'){
         alert('이름과 가격 모두 입력해주세요.')
     }else{
      alert(`name: ${name}, price: ${number}`);
