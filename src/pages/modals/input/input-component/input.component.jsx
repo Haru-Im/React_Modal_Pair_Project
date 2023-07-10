@@ -1,4 +1,4 @@
-import { Button, Input, Label } from "../input-style/input.style";
+import { Input } from "../input-style/input.style";
 import { INPUT_NAME, INPUT_PRICE } from "../input-utils";
 
 export const InputComponent = ({ attribute, value, onChange }) => {
@@ -20,8 +20,4 @@ export const InputComponent = ({ attribute, value, onChange }) => {
       <Input value={value} onChange={onChange} />
     </div>
   );
-};
-
-export const ButtonComponent = ({ children, onClick }) => {
-  return <Button onClick={onClick}>{children}</Button>;
 };

@@ -1,7 +1,8 @@
-import { ButtonComponent, InputComponent } from "../input-component";
 import { useInput } from "../input-hooks";
-import { ExtendedContainer, FormContainer } from "../input-style/input.style";
+import { InputComponent } from "../input-component";
+import { ExtendedContainer, FormContainer } from "../input-style";
 import { INPUT_NAME, INPUT_PRICE } from "../input-utils";
+import { ATTRIBUTE_PRIMARY, ButtonComponent, SIZE_SMALL } from "../../button";
 
 export const InputContainer = () => {
   const { inputValues, handleInputChange, handleSaveClick } = useInput();
@@ -19,9 +20,11 @@ export const InputContainer = () => {
           value={inputValues[INPUT_PRICE]}
           onChange={(event) => handleInputChange(event, INPUT_PRICE)}
         />
-        <ButtonComponent onClick={(event) => handleSaveClick(event)}>
-          저장
-        </ButtonComponent>
+        <ButtonComponent
+          attribute={ATTRIBUTE_PRIMARY}
+          size={SIZE_SMALL}
+          onClick={handleSaveClick}
+        >저장</ButtonComponent>
       </ExtendedContainer>
     </FormContainer>
   );
