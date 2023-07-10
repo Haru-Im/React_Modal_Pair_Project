@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import ReactDOM from "react-dom";
 
-function Modals({ children, modal1, modal2 }) {
-  if (modal1 && !modal2) {
+function Modals({ children, modal1, modal2,  }) {
+  if (modal1 && !modal2 ) {
     return ReactDOM.createPortal (
       <>
         <Overlayed>
@@ -28,7 +28,7 @@ function Modals({ children, modal1, modal2 }) {
     document.getElementById('portal')
     )
   }
-  
+
   return null;
 
 }

@@ -33,7 +33,6 @@ function App() {
           onClick={() => {
             const inputValue = prompt("어렵나요?");
             if (inputValue !== null) {
-              console.log(inputValue);
             }
           }}
         >
