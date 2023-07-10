@@ -1,11 +1,10 @@
 import { ThemeProvider } from "styled-components";
-import { ButtonLayout, InputLayout, theme } from "./pages";
+import { ModalsPage, theme } from "./pages";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <ButtonLayout />
-      <InputLayout />
+      <ModalsPage />
     </ThemeProvider>
   );
 }
