@@ -1,5 +1,11 @@
+// @ts-nocheck
 import { ButtonContentWrapper, ThemedButton } from "../button-style";
-import { ATTRIBUTE_PRIMARY, NegativeIcon, PrimaryIcon, SIZE_LARGE } from "../button-utils";
+import {
+  ATTRIBUTE_PRIMARY,
+  NegativeIcon,
+  PrimaryIcon,
+  SIZE_LARGE,
+} from "../button-utils";
 
 export const ButtonComponent = ({ attribute, size, onClick, children }) => {
   return (

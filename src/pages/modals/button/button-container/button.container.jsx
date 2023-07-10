@@ -21,10 +21,18 @@ export const BtnContainer = ({ attribute }) => {
         >
           Large Primary Button
         </ButtonComponent>
-        <ButtonComponent attribute={attribute} size={SIZE_MEDIUM}>
+        <ButtonComponent
+          attribute={attribute}
+          size={SIZE_MEDIUM}
+          onClick={() => {}}
+        >
           Medium
         </ButtonComponent>
-        <ButtonComponent attribute={attribute} size={SIZE_SMALL}>
+        <ButtonComponent
+          attribute={attribute}
+          size={SIZE_SMALL}
+          onClick={() => {}}
+        >
           Small
         </ButtonComponent>
       </Container>
@@ -41,10 +49,18 @@ export const BtnContainer = ({ attribute }) => {
         >
           Large Negative Button
         </ButtonComponent>
-        <ButtonComponent attribute={attribute} size={SIZE_MEDIUM}>
+        <ButtonComponent
+          attribute={attribute}
+          size={SIZE_MEDIUM}
+          onClick={() => {}}
+        >
           Medium
         </ButtonComponent>
-        <ButtonComponent attribute={attribute} size={SIZE_SMALL}>
+        <ButtonComponent
+          attribute={attribute}
+          size={SIZE_SMALL}
+          onClick={() => {}}
+        >
           Small
         </ButtonComponent>
       </Container>
