@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { Modalcontainer } from "./components/containers/modalcontainer";
-import Modals from "./components/modals";
-import Select from "./components/select";
-import Input from "./components/Input"
-import { ButtonContainer } from "./pages/button/buttoncontainer";
-
 import Buttons from "./pages/button/buttonmain";
-import { LargeButton, SmallButton } from "./pages/button";
+import { ButtonContainer } from "./pages/button/buttoncontainer";
+import { LargeButton, SmallButton } from "./pages/button/buttonssize";
+import Modals from './components/modals'
+import {Modalcontainer} from './components/containers/modalcontainer'
+import Select from './components/select'
+import Inputmain from "./pages/input/inputmain";
 
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
     <>
     <Buttons/>
       <h1>Input</h1>
-      <Input />
+      <Inputmain/>
       <h1> Modal</h1>
       <ButtonContainer>
         <SmallButton

@@ -21,7 +21,7 @@ function Select() {
     const box = openBtnRef.current;
     const rect = box.getBoundingClientRect();
     setModalPosition({
-      top: rect.bottom + 1,
+      top: rect.bottom +89,
       left: rect.left + 2, 
     });
   }, [openBtnRef]);
