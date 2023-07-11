@@ -9,7 +9,7 @@ export const ModalOverlay = styled.div`
   background-color: rgb(221, 221, 221);
 `;
 
-export const Modallll = styled.div`
+export const Modal = styled.div`
   position: absolute;
   left: 50%;
   top: 50%;

@@ -29,7 +29,7 @@ export const useInput = () => {
 
     if (attribute === INPUT_PRICE) {
       value = value.replace(/[^0-9]/g, ""); // 숫자만 입력되게 하는 코드
-      value = value ? parseInt(value).toLocaleString() : ""; // 3자리마다 콤마가 찍히도록
+      value = value ? parseInt(value).toLocaleString() : "0"; // 3자리마다 콤마가 찍히도록
     }
 
     setInputValues({

@@ -1,5 +1,5 @@
+// @ts-nocheck
 import { useCallback, useRef } from "react";
-import ReactDOM from "react-dom";
 import {
   ATTRIBUTE_NEGATIVE,
   ATTRIBUTE_PRIMARY,
@@ -9,15 +9,16 @@ import {
 import {
   ButtonWrapper,
   CloseButton,
-  Modallll,
+  Modal,
   ModalOverlay,
 } from "../modal-style";
 import { useOutsideClick } from "../modal-hooks";
+import { ModalsPortal } from "../../modals.portal";
 
 export const ModalComponent = ({
   isOpen,
   onClose,
-  $ignoreOverlayClick = false,
+  $ignoreOverlayClick,
   children,
 }) => {
   const modalRef = useRef();
@@ -34,14 +35,13 @@ export const ModalComponent = ({
     return null;
   }
 
-  // ReactDOM.createPortal : 자식 노드를 부모가 아닌 다른 DOM 노드로 렌더링하도록 하는데 사용
-  return ReactDOM.createPortal(
-    <div id="portal-target">
+  const modal = (
+    <>
       <ModalOverlay />
-      <Modallll ref={modalRef} $ignoreOverlayClick={$ignoreOverlayClick}>
+      <Modal ref={modalRef} $ignoreOverlayClick={$ignoreOverlayClick}>
         <div>{children}</div>
         {$ignoreOverlayClick ? (
-          <ButtonWrapper $ignoreOverlayClick={true}>
+          <ButtonWrapper $ignoreOverlayClick>
             <ButtonComponent
               attribute={ATTRIBUTE_NEGATIVE}
               size={SIZE_SMALL}
@@ -62,9 +62,9 @@ export const ModalComponent = ({
             <CloseButton onClick={onClose}>X</CloseButton>
           </ButtonWrapper>
         )}
-      </Modallll>
-    </div>,
-    // 렌더링되는 곳
-    document.body
+      </Modal>
+    </>
   );
+
+  return <ModalsPortal>{modal}</ModalsPortal>;
 };
