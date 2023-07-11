@@ -2,10 +2,12 @@ import { useState } from "react";
 import Buttons from "./pages/button/buttonmain";
 import { ButtonContainer } from "./pages/button/buttoncontainer";
 import { LargeButton, SmallButton } from "./pages/button/buttonssize";
-import Modals from './components/modals'
+
 import {Modalcontainer} from './components/containers/modalcontainer'
 import Select from './components/select'
 import Inputmain from "./pages/input/inputmain";
+import OpenModal1 from "./pages/Modal/openModal1";
+import OpenModal2 from "./pages/Modal/openModal2";
 
 
 function App() {
@@ -15,8 +17,8 @@ function App() {
   return (
     <>
     <Buttons/>
-      <h1>Input</h1>
       <Inputmain/>
+
       <h1> Modal</h1>
       <ButtonContainer>
         <SmallButton
@@ -26,7 +28,7 @@ function App() {
         >
           open modal 1
         </SmallButton>
-        <Modals modal1={modal1}>
+        <OpenModal1 modal1={modal1}>
           test modal
           <Modalcontainer>
             <SmallButton
@@ -46,7 +48,7 @@ function App() {
               확인
             </SmallButton>
           </Modalcontainer>
-        </Modals>
+        </OpenModal1>
         <LargeButton
           onClick={() => setModal2(true)}
           textcolor="red"
@@ -55,8 +57,8 @@ function App() {
           <p>open modal2</p>
         </LargeButton>
         <div onClick={()=> setModal2(false)}>
-          <Modals modal2={modal2}>
-            test 2
+          <OpenModal2 modal2={modal2}>
+            test2
             <div>
               <button
                 onClick={() => setModal2(false)}
@@ -73,7 +75,7 @@ function App() {
                 x
               </button>
             </div>
-          </Modals>
+          </OpenModal2>
         </div>
       </ButtonContainer>
       <Select />

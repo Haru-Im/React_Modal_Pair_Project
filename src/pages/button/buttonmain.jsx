@@ -2,10 +2,6 @@ import React from "react";
 import { ButtonContainer } from "./buttoncontainer";
 import { LargeButton, MediumButton, SmallButton } from "./buttonssize";
 
-
-
-
-
 function Buttons() {
   return (
     <>

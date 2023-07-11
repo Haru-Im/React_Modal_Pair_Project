@@ -9,6 +9,7 @@ function Inputmain() {
   
     return (
       <>
+      <h1> Input</h1>
         <Inputcontainer>
           <div>
             이름 <Inputbox type="text" value={name} onChange={(e) => NameHandler(e, setName)} />
