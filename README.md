@@ -34,7 +34,7 @@ You can view the deployed application at: [React Modal Pair Project](https://rea
             - **button** : Folder containing button-related components.
                 - **button-component** : Folder for storing reusable UI components.
                 - **button-container** : Folder for storing components that group together several other components.
-                - **button-handler** (or hooks) : Folder containing handlers related to buttons.
+                - **button-hooks** : Folder containing hooks related to buttons.
                 - **button-layout** : Folder for storing components that construct the layout or larger structure of a page.
                 - **button-style** : Folder for storing styling-related files.
                     - **button.style.js** : Contains styled-components related to the button.
@@ -42,10 +42,13 @@ You can view the deployed application at: [React Modal Pair Project](https://rea
                 - **button-utils** : Folder for storing utilities related to the button.
                     - **constant.js** : File defining constants related to the button.
                     - **icons.js** : File storing icons related to the button.
-            - **input** : Has the same internal structure as the button folder.
-            - **modal** : Has the same internal structure as the button folder.
-            - **select** : Has the same internal structure as the button folder.
-    - **redux** : Folder for managing global state with Redux.
+                - **button.page.jsx** : File where the button page is displayed.
+            - **input** : Has a similar internal structure to the button folder.
+            - **modal** : Has a similar internal structure to the button folder.
+            - **select** : Has a similar internal structure to the button folder.
+        - **styles** : Folder containing styles to be used globally across the modals pages.
+        - **modals.page.jsx** : Page containing all modals pages.
+        - **modals.portal.jsx** : Component creating a portal that can be used across multiple elements.
     - **App.js** : The entry point of the application.
 
 
