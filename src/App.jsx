@@ -4,12 +4,13 @@ import Modalmain from "./pages/Modal/modalMain";
 import Selectmain from "./pages/Select/selectMain";
 
 function App() {
+
   return (
     <>
       <Buttons />
       <Inputmain />
       <Modalmain />
-      < Selectmain/>
+      <Selectmain />
     </>
   );
 }
