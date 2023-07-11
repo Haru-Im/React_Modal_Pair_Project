@@ -1,5 +1,5 @@
 import React from 'react';
-import { MODAL_STYLES, Overlayed } from './modalstyle';
+import { MODAL_STYLES, Overlayed } from './Modalstyle';
 import ReactDOM from "react-dom";
 
 function OpenModal1({ modal1, children,}) {
