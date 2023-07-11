@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { SmallButton } from "./buttons";
+
 import styled from "styled-components";
+import { SmallButton } from "../pages/button/buttonssize";
 
 function Input() {
   const [name, setName] = useState("");

@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
-export const LargeButton = styled.button.attrs((props)=>({
+// LargeButton
+const LargeButton = styled.button.attrs((props)=>({
 
   style:{
     color: props.textcolor? props.textcolor : 'black',
@@ -25,8 +26,8 @@ export const LargeButton = styled.button.attrs((props)=>({
   }
 `;
 
-
-export const MediumButton = styled.button.attrs((props) => ({
+//MediumButton
+const MediumButton = styled.button.attrs((props) => ({
   style: {
     backgroundColor: props.backgroundcolor || 'rgb(85, 239, 196)',
     color: props.textcolor || 'black'
@@ -43,8 +44,8 @@ export const MediumButton = styled.button.attrs((props) => ({
   }
 `;
 
-
-export const SmallButton = styled.button.attrs((props) => ({
+//SmallButton
+const SmallButton = styled.button.attrs((props) => ({
   style:{
     backgroundColor: props.backgroundcolor || 'rgb(85, 239, 196)',
     color:props.textcolor || 'rgb(0,0,0)'
@@ -62,4 +63,4 @@ export const SmallButton = styled.button.attrs((props) => ({
   }
 `;
 
-
+export {LargeButton,MediumButton,SmallButton}

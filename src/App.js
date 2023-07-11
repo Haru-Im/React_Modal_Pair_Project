@@ -1,10 +1,13 @@
 import { useState } from "react";
-import Input from "./components/Input";
-import { LargeButton, MediumButton, SmallButton } from "./components/buttons";
 import { Modalcontainer } from "./components/containers/modalcontainer";
-import { ButtonContainer } from "./components/containers/buttoncotainer";
 import Modals from "./components/modals";
 import Select from "./components/select";
+import Input from "./components/Input"
+import { ButtonContainer } from "./pages/button/buttoncontainer";
+
+import Buttons from "./pages/button/buttonmain";
+import { LargeButton, SmallButton } from "./pages/button";
+
 
 function App() {
   const [modal1, setModal1] = useState(false);
@@ -12,46 +15,7 @@ function App() {
 
   return (
     <>
-      <h1> Button</h1>
-      <ButtonContainer>
-        <LargeButton
-          onClick={() => {
-            alert("버튼을 만들어보세요");
-          }}
-        >
-          <p> Large Primary Button </p>
-          <p>{">"} </p>
-        </LargeButton>
-        <MediumButton>Medium</MediumButton>
-        <SmallButton>Small </SmallButton>
-      </ButtonContainer>
-      <ButtonContainer>
-        <LargeButton
-          textcolor="rgb(214, 48, 49)"
-          backgroundcolor="rgb(255, 255, 255)"
-          border="3px solid rgb(250, 177, 160)"
-          onClick={() => {
-            const inputValue = prompt("어렵나요?");
-            if (inputValue !== null) {
-            }
-          }}
-        >
-          <p>Large Negative Button</p>
-        </LargeButton>
-
-        <MediumButton
-          textcolor="rgb(214, 48, 49)"
-          backgroundcolor="rgb(250, 177, 160)"
-        >
-          Medium
-        </MediumButton>
-        <SmallButton
-          textcolor="rgb(214, 48, 49)"
-          backgroundcolor="rgb(250, 177, 160)"
-        >
-          Small
-        </SmallButton>
-      </ButtonContainer>
+    <Buttons/>
       <h1>Input</h1>
       <Input />
       <h1> Modal</h1>
@@ -113,8 +77,7 @@ function App() {
           </Modals>
         </div>
       </ButtonContainer>
-      <Select/>
-      <div id="portal"></div>
+      <Select />
     </>
   );
 }
