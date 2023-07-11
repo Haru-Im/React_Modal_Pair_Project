@@ -1,7 +1,7 @@
 import Buttons from "./pages/button/buttonmain";
-import Select from "./components/select";
 import Inputmain from "./pages/input/inputmain";
 import Modalmain from "./pages/Modal/modalMain";
+import Selectmain from "./pages/Select/selectMain";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Buttons />
       <Inputmain />
       <Modalmain />
-      <Select />
+      < Selectmain/>
     </>
   );
 }
