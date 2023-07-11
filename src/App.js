@@ -1,7 +1,12 @@
-import "./App.css";
+import { ThemeProvider } from "styled-components";
+import { ModalsPage, theme } from "./pages";
 
 function App() {
-  return <></>;
+  return (
+    <ThemeProvider theme={theme}>
+      <ModalsPage />
+    </ThemeProvider>
+  );
 }
 
 export default App;
