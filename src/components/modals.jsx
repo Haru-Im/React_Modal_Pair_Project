@@ -46,6 +46,8 @@ const MODAL_STYLES = styled.div`
   padding: 100px;
   z-index: 1000;
   border-radius: 15px;
+
+  
 `;
 
 const Overlayed = styled.div`

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { styled } from "styled-components";
 import Optionmodal1 from "./option";
 
@@ -13,6 +13,19 @@ function Select() {
   const [openModal, setopenModal] = useState(false);
   const [selectedText, setSelectedText] = useState("리엑트");
   const [selectedText2, setSelectedText2] = useState("리엑트");
+
+  const openBtnRef = useRef(null); 
+  const [modalPosition, setModalPosition] = useState({}); 
+
+  useEffect(() => {
+    const box = openBtnRef.current;
+    const rect = box.getBoundingClientRect();
+    setModalPosition({
+      top: rect.bottom + 1,
+      left: rect.left + 2, 
+    });
+  }, [openBtnRef]);
+
 
   return (
     <>
@@ -34,12 +47,12 @@ function Select() {
                 {selectList.map((item, idx) => {
                   return (
                     <OptionSelect
-                      onClick={() => {
-                        setSelectedText(item.text);
-                        setSelectModal(false);
-                      }}
-                      key={idx}
-                      value={item.value}
+                    onClick={() => {
+                      setSelectedText(item.text);
+                      setSelectModal(false);
+                    }}
+                    key={idx}
+                    value={item.value}
                     >
                       {" "}
                       {item.text}
@@ -48,23 +61,23 @@ function Select() {
                 })}
               </OptionBox>
             )}
-          </div>
+            </div>
           <div>
-            <Buttonstyled onClick={() => setopenModal(!openModal)}>
+            <Buttonstyled  ref={openBtnRef} onClick={() => setopenModal(!openModal)}>
               <div> {selectedText2}</div>
               <div>▼</div>
             </Buttonstyled>
             {openModal && (
               <Optionmodal1
-                close={openModal}
-                selectList={selectList}
-                optionSelect={(item) => {
-                  setSelectedText2(item.text);
-                  setopenModal(false);
-                }}
-                selectedText={selectedText}
+              open={openModal}
+              selectList={selectList}
+              optionSelect={(item) => {
+                setSelectedText2(item.text);
+                setopenModal(false);
+              }}
+              style={modalPosition}
               ></Optionmodal1>
-            )}
+              )}          
           </div>
         </div>
       </SelectContainer>
@@ -110,7 +123,7 @@ const OptionSelect = styled.div`
   width: 100%;
   height: 30px;
   font-size: 16px;
-  display: flex;
+  display: flex; 
   align-items: center;
   cursor: pointer;
   padding: 2px;
@@ -120,3 +133,4 @@ const OptionSelect = styled.div`
     background-color: lightgrey;
   }
 `;
+

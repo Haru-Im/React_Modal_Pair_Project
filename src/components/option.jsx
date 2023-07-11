@@ -2,10 +2,11 @@ import React from "react";
 import { styled } from "styled-components";
 import ReactDOM from "react-dom";
 
-const Optionmodal1 = ({ selectList, optionSelect, close }) => {
-  if (close) {
+const Optionmodal1 = ({ selectList, optionSelect, open, style }) => {
+
+  if (open) {
     return ReactDOM.createPortal(
-      <OptionBox1>
+      <OptionBox1 top={style.top} left= {style.left}>
         {selectList.map((item, idx) => (
           <OptionSelect
             onClick={() => optionSelect(item)}
@@ -16,27 +17,27 @@ const Optionmodal1 = ({ selectList, optionSelect, close }) => {
           </OptionSelect>
         ))}
       </OptionBox1>,
-       document.getElementById('portal')
+      document.getElementById("portal")
     );
   }
-
   return null;
 };
 
 export default Optionmodal1;
 
 const OptionBox1 = styled.div`
-background-color: white;
-  position: absolute;
+  background-color: white;
   display: flex;
   width: 290px;
   flex-direction: column;
   border: 1px solid black;
   border-radius: 12px;
   margin-top: 12px;
+  position: absolute;
   overflow: hidden;
-  top: calc(136% + 35px);
-  left:calc(31% + 9px) ;
+
+  top: ${props => props.top}px;
+  left: ${props => props.left}px
 `;
 
 const OptionSelect = styled.div`
@@ -52,4 +53,4 @@ const OptionSelect = styled.div`
   &:hover {
     background-color: lightgrey;
   }
-`
+`;
