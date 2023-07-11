@@ -1,6 +1,7 @@
 import { ButtonPage } from "./button";
 import { InputPage } from "./input";
 import { ModalPage } from "./modal";
+import { SelectPage } from "./select";
 
 export const ModalsPage = ({}) => {
   return (
@@ -8,6 +9,7 @@ export const ModalsPage = ({}) => {
       <ButtonPage />
       <InputPage />
       <ModalPage />
+      <SelectPage />
     </>
   );
 };
