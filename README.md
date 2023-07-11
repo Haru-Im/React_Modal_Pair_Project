@@ -23,8 +23,7 @@ You can view the deployed application at: [React Modal Pair Project](https://rea
 ## Git Commit Convention
 - Commits consist of a type and a body
 - The first letter of the type is capitalized
-- Describe in an imperative mood (be concise and focus on the key points)
-
+- The type should be described in an imperative mood (be concise and focus on the key points)
 - The body should be as detailed as possible, focusing on what has been changed
 
 
