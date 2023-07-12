@@ -59,21 +59,21 @@ We follow basic React naming conventions. The names of components start with a c
 ## Features
 **Button:**
 1. By simply assigning attribute and size properties to the component, you can easily create and use six different buttons.
-2. Depending on the icon property, you can choose to display an icon after the large button or not.
-3. Implemented an active property that changes CSS effects when the button is clicked.
-4. Implemented an alert window and a prompt window for user input when the large button is clicked.
+2. Depending on the icon property, you can choose to display an icon (or not) when the attribute is large.
+3. Implemented an active property that changes CSS effects (like changing the background-color!) when the button is clicked.
+4. Implemented an alert window and a prompt window for user input (this is different from the attribute) when the large button is clicked.
 5. Defined repeating strings as constants to reduce human error.
 6. Extracted repeating properties in styled-components into a theme for reusability.
 
 **Input:**
-1. If you don't enter anything in the 'name' input and click the save button, it won't display the input value.
+1. If you don't enter anything in the 'name' input field and click the save button, the total input result won't be displayed. Instead, an alert window will pop up.
 2. Only numbers can be entered in the 'price' input, and the default value is set to 0, so if you delete all numbers, 0 remains.
 3. Implemented a feature to break up numbers into three digits when entering numbers in the 'price' input.
-4. If the 'name' field is fully entered, the corresponding 'name' and 'price' values are displayed in an alert.
-5. The save button reuses the previously created button component (Property: primary, Size: small).
+4. If the 'name' field is fully entered, the corresponding 'name' and 'price' values are displayed.
+5. The save button reuses the previously created button component (attribute: primary, size: small).
 
 **Modal:**
-1. Clicking the button triggers a pop-up modal.
+1. Clicking the buttons triggers a pop-up modal.
 2. If you click the first button, the modal window cannot be closed by clicking the external area, and it can only be closed with a button.
 3. If you click the second button, the modal window can be closed by clicking the external area, as well as by clicking the 'X' button.
 4. These modals are implemented through a portal.
