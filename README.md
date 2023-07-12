@@ -71,6 +71,7 @@ We follow basic React naming conventions. The names of components start with a c
 3. Implemented a feature to break up numbers into three digits when entering numbers in the 'price' input.
 4. If the 'name' field is fully entered, the corresponding 'name' and 'price' values are displayed.
 5. The save button reuses the previously created button component (attribute: primary, size: small).
+6. When you click the save button, the previously entered field values will disappear. Additionally, the 'name' field is set to automatically receive focus.
 
 **Modal:**
 1. Clicking the buttons triggers a pop-up modal.
